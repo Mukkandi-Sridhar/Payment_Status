@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Payment Status</title>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 20px;
+  color: #333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 45px;
+  background-color: #007bff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-top: 20px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+h3 {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  color: red;
+  font-weight: bold;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-in-out;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.list li {
+  font-size: 20px;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  animation: floating 4s ease-in-out infinite;
+}
+
+.list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.green {
+  color: green; /* Green color for Paid items */
+  font-weight: bold;
+}
+
+.red {
+  color: red; /* Red color for Unpaid items */
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 50px;
+  animation: fadeIn 3.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .list li {
+    font-size: 16px;
+  }
+}
+
+/* Styling for the Paid (green) and Unpaid (red) items */
+.list li span {
+  font-weight: bold;
+}
+
+.list li.red span {
+  color: red; /* Red color for Unpaid */
+}
+
+.list li.green span {
+  color: green; /* Green color for Paid */
+}
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Payment Status</h1>
+    <h3>Red means Unpaid, Green means Paid</h3>
+
+    <div class="section">
+        <h2>List of Students</h2>
+        <ul class="list">
+          <!-- Manually listed registration numbers with red and green colors -->
+          <li><span class="red">23091A3301</span></li>
+          <li><span class="red">23091A3302</span></li>
+          <li><span class="red">23091A3303</span></li>
+          <li><span class="red">23091A3304</span></li>
+          <li><span class="green">23091A3305</span></li>
+          <li><span class="red">23091A3306</span></li>
+          <li><span class="green">23091A3307</span></li>
+          <li><span class="red">23091A3308</span></li>
+          <li><span class="red">23091A3309</span></li>
+          <li><span class="red">23091A3310</span></li>
+          <li><span class="red">23091A3311</span></li>
+          <li><span class="red">23091A3312</span></li>
+          <li><span class="red">23091A3313</span></li>
+          <li><span class="green">23091A3314</span></li>
+          <li><span class="red">23091A3315</span></li>
+          <li><span class="red">23091A3316</span></li>
+          <li><span class="red">23091A3317</span></li>
+          <li><span class="red">23091A3318</span></li>
+          <li><span class="red">23091A3319</span></li>
+          <li><span class="red">23091A3320</span></li>
+          <li><span class="red">23091A3321</span></li>
+          <li><span class="red">23091A3322</span></li>
+          <li><span class="red">23091A3323</span></li>
+          <li><span class="red">23091A3324</span></li>
+          <li><span class="red">23091A3325</span></li>
+          <li><span class="green">23091A3326</span></li>
+          <li><span class="red">23091A3327</span></li>
+          <li><span class="red">23091A3328</span></li>
+          <li><span class="red">23091A3329</span></li>
+          <li><span class="red">23091A3330</span></li>
+          <li><span class="red">23091A3331</span></li>
+          <li><span class="red">23091A3332</span></li>
+          <li><span class="red">23091A3333</span></li>
+          <li><span class="red">23091A3334</span></li>
+          <li><span class="red">23091A3335</span></li>
+          <li><span class="red">23091A3336</span></li>
+          <li><span class="red">23091A3337</span></li>
+          <li><span class="red">23091A3338</span></li>
+          <li><span class="red">23091A3339</span></li>
+          <li><span class="red">23091A3340</span></li>
+          <li><span class="red">23091A3341</span></li>
+          <li><span class="red">23091A3342</span></li>
+          <li><span class="green">23091A3343</span></li>
+          <li><span class="red">23091A3344</span></li>
+          <li><span class="red">23091A3345</span></li>
+          <li><span class="red">23091A3346</span></li>
+          <li><span class="red">23091A3347</span></li>
+          <li><span class="red">23091A3348</span></li>
+          <li><span class="green">23091A3349</span></li>
+          <li><span class="red">23091A3350</span></li>
+          <li><span class="red">23091A3351</span></li>
+          <li><span class="red">23091A3352</span></li>
+          <li><span class="red">23091A3353</span></li>
+          <li><span class="red">23091A3354</span></li>
+          <li><span class="red">23091A3355</span></li>
+          <li><span class="red">23091A3356</span></li>
+          <li><span class="red">23091A3357</span></li>
+          <li><span class="red">23091A3358</span></li>
+          <li><span class="red">23091A3359</span></li>
+          <li><span class="red">23091A3360</span></li>
+          <li><span class="red">23091A3361</span></li>
+          <li><span class="red">23091A3362</span></li>
+          <li><span class="red">23091A3363</span></li>
+          <li><span class="green">23091A3364</span></li>
+          <li><span class="red">23091A3365</span></li>
+          <!-- New registration numbers -->
+          <li><span class="red">24095A3301</span></li>
+          <li><span class="red">24095A3302</span></li>
+          <li><span class="green">24095A3303</span></li>
+          <li><span class="red">24095A3304</span></li>
+          <li><span class="red">24095A3305</span></li>
+          <li><span class="green">24095A3306</span></li>
+          <li><span class="red">24095A3307</span></li>
+          
+        </ul>
+      </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Optivoxx Technologies | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
