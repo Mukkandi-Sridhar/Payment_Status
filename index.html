@@ -44,13 +44,70 @@ h2 {
   animation: fadeIn 2.5s ease-in-out;
 }
 
+
+
+
 h3 {
-  text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   font-style: italic;
-  color: red;
   font-weight: bold;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 3s ease-in-out, rainbowText 3s ease-in-out infinite;
+  background-image: linear-gradient(45deg, #ff6b6b, #f7b731, #48dbfb, #1dd1a1);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes rainbowText {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+h4 {
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  color: #333;
+  font-weight: 600;
+  background-color: #f8f9fa;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+h4:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+h4:before {
+  content: "⚙️"; /* Icon before the text */
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+h4 span {
+  font-style: italic;
+  color: #6c757d; /* Subtle color for the 'ignored professionally' part */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .container {
@@ -167,6 +224,8 @@ h3 {
   <div class="container">
     <h1>Student Payment Status</h1>
     <h3>Red means Unpaid, Green means Paid</h3>
+    <h4><span>Stall Members are ignored </span></h4>
+
 
     <div class="section">
         <h2>List of Students</h2>
